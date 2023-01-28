@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.game-board {
+    width: 80%;
+    height: 600px;
+    border: 5px solid rgba(0, 248, 95, 0.973);
+    margin: 2em auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+@keyframes pipe-animation { 
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.clouds {
+    width: 550px;
+    position: absolute;
+    animation: clouds 20s infinite linear;
+}
+
+@keyframes clouds { 
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.score{
+    position: absolute;
+    right: 50px;
+    margin-top: 20px;
+    font-family: 'Arial Black', Times;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Arial Black', Times;
+    color: rgba(0, 248, 95, 0.973);
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+button {
+    background-color: rgba(0, 248, 95, 0.973);
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: 0.5s;
+    top: 50px;
+    right: 160px;
+    border-radius: 0.5em;
+    position: absolute;
+    font-size: medium;
+    font-family: 'Arial Black', Times;
+}
+  
+button:hover{
+    background-color: rgba(0, 168, 65, 0.973);
+}
